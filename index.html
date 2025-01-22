@@ -1,46 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>Twimba</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Twimba</title>
+  </head>
+  <body>
+    <main>
+      <header class="header">
+        <h1>Twimba</h1>
+        <!-- <img src="images/main-logo.png" alt="logo"> -->
+      </header>
 
-  <main>
-    <header class="header">
-      <h1>Twimba</h1>
-      <!-- <img src="images/main-logo.png" alt="logo"> -->
-    </header>
+      <section class="tweet-area">
+        <img src="images/main-logo.png" alt="" />
+        <form action="" id="form">
+          <textarea
+            name="tweet-text"
+            id="tweet-text"
+            placeholder="what's happening?"
+          ></textarea>
+          <button type="submit">Tweet</button>
+        </form>
+      </section>
 
-    <section class="tweet-area">
-      <img src="images/main-logo.png" alt="">
-      <form action="" id="form">
-        <textarea name="tweet-text" id="tweet-text" placeholder="what's happening?"></textarea>
-        <button type="submit">Tweet</button>
-      </form>
-    </section>
-
-    <section class="feed">
-      <!-- Tweets will be dynamically added here. but here is the demo-->
-      <div class="tweet">
-        <div class="tweet-heade">
-          <img src="images/main-logo.png" alt="">
-          <h3>Twimba</h3>
+      <section class="feed">
+        <!-- Tweets will be dynamically added here. but here is the demo-->
+        <div class="tweet">
+          <div class="tweet-header">
+            <img src="images/pp2.jpg" alt="tweet-account" class="handle-pic" />
+            <h3 class="handle">Twimba</h3>
+          </div>
+          <div class="tweet-content">
+            <p>
+              lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Quisquam, voluptates.
+            </p>
+          </div>
+          <div class="tweet-footer">
+            <span class="comment"> <i class="fa-regular fa-comment"></i> 12</span>
+            <span class="heart"> <i class="fa-regular fa-heart"></i> 12</span>
+            <span class="retweet"> <i class="fas fa-retweet"></i>  12</span>
+            <span class="share"> <i class="fa-solid fa-share"></i> 12</span>
+          </div>
+          <div class="replies">
+            <div class="reply">
+              <div class="reply-header">
+                <img src="images/pp2.jpg" alt="tweet-account" />
+                <h3>Twimba</h3>
+              </div>
+              <div class="reply-content">
+                <p>
+                  lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Quisquam, voluptates.
+                </p>
+              </div>
+            </div>
+            <div class="reply">
+              <div class="reply-header">
+                <img src="images/pp2.jpg" alt="tweet-account" />
+                <h3>Twimba</h3>
+              </div>
+              <div class="reply-content">
+                <p>
+                  lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Quisquam, voluptates.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="tweet-content">
-          <h3>Twimba</h3>
-          <p>lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptates.</p>
+        <div class="tweet">
+          <div class="tweet-header">
+            <img src="images/pp2.jpg" alt="tweet-account" class="handle-pic" />
+            <h3 class="handle">Twimba</h3>
+          </div>
+          <div class="tweet-content">
+            <p>
+              lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Quisquam, voluptates.
+            </p>
+          </div>
+          <div class="tweet-footer">
+            <span class="comment"> <i class="fa-regular fa-comment"></i> 12</span>
+            <span class="heart"> <i class="fa-regular fa-heart"></i> 12</span>
+            <span class="retweet"> <i class="fas fa-retweet"></i>  12</span>
+            <span class="share"> <i class="fa-solid fa-share"></i> 12</span>
+          </div>
+          <div class="replies">
+            <div class="reply">
+              <div class="reply-header">
+                <img src="images/pp2.jpg" alt="tweet-account" />
+                <h3>Twimba</h3>
+              </div>
+              <div class="reply-content">
+                <p>
+                  lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Quisquam, voluptates.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <footer class="footer">
-      footer goes here
-
-    </footer>
-  </main>
-  
-</body>
+      
+    </main>
+    <footer class="footer">Made with 🔥, by Kaleab</footer>
+  </body>
 </html>
