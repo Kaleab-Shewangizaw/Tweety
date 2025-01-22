@@ -54,7 +54,7 @@ main .tweet-area img{
   align-self: flex-start;
   width: 200px;
   margin-left: auto;
-  filter: drop-shadow(5px -10px 20px rgba(241, 149, 12, 0.84));
+  filter: drop-shadow(5px -10px 30px rgba(241, 149, 12, 0.977));
 }
 
 main .tweet-area form{
@@ -75,13 +75,18 @@ main .tweet-area form textarea{
   resize: none;
   padding: 5px;
   border-radius: 10px;
-  background-color: rgba(32, 32, 32, 0.597);
+  background-color: rgba(54, 54, 54, 0.492);
   color: white;
+}
+
+main .tweet-area form textarea::placeholder{
+  color: rgb(179, 176, 176);
 }
 
 main .tweet-area form textarea:focus{
   outline: none;
   border-top: #ff9500 2px solid;
+  background-color: rgba(32, 32, 32, 0.597);
 }
 
 main .tweet-area form button{
