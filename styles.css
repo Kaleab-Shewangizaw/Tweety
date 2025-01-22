@@ -1,0 +1,108 @@
+body{
+    background-color: #494444;
+    margin: 0;
+    padding: 0;
+    padding-block: 5%;
+    height: 100%;
+    width: 100%;
+}
+
+main{
+  width: 50%;
+  margin: auto;
+  background-color: rgba(32, 32, 32, 0.597);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+
+}
+
+main .header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding: 20px;
+  flex-direction: row-reverse;
+  margin: 0;
+  height: 50px;
+}
+
+main .header h1{
+  margin: 0;
+  font-weight: 900;
+  color: #f5af23;
+
+}
+
+main .header img{
+  width: 120px;
+  margin: 0;
+  
+}
+
+main .tweet-area{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+main .tweet-area img{
+  align-self: flex-start;
+  width: 200px;
+  margin-left: auto;
+  filter: drop-shadow(5px -10px 20px rgba(241, 149, 12, 0.84));
+}
+
+main .tweet-area form{
+  width: 60%;
+
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+main .tweet-area form textarea{
+  border: none;
+  border-top: 2px solid #b78012;
+  width: 100%;
+  height: 150px;
+  font-size: large;
+  resize: none;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgba(32, 32, 32, 0.597);
+  color: white;
+}
+
+main .tweet-area form textarea:focus{
+  outline: none;
+  border-top: #ff9500 2px solid;
+}
+
+main .tweet-area form button{
+  background-color: #f5af23;
+  border: none;
+  width: fit-content;
+  padding-block: 13px;
+  padding-inline: 43px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: large;
+  font-weight: 500;
+  color: black;
+  margin: auto;
+  margin-top: 20px;
+  border: 2px solid #f5af23;
+  transition: all 0.3s;
+}
+
+main .tweet-area form button:hover{
+  background-color: rgba(32, 32, 32, 0.597);;
+  color: #ff9500;
+  border: 2px solid #ff9500;
+}
