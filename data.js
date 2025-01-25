@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
+import { v4 as uuidv4 } from "https://jspm.dev/uuid";
 
 let data = [
   {
@@ -20,9 +20,9 @@ let data = [
       {
         handle: "Kaleab",
         pfp: "images/pp1.jpg",
-        content: "Can't agree more!"
-      }
-    ]
+        content: "Can't agree more!",
+      },
+    ],
   },
   {
     handle: "Kaleab",
@@ -43,14 +43,14 @@ let data = [
       {
         handle: "Kaleab",
         pfp: "images/pp1.jpg",
-        content: "Can't agree more!"
+        content: "Can't agree more!",
       },
       {
         handle: "Kaleab",
         pfp: "images/pp1.jpg",
-        content: "Can't agree more!"
-      }
-    ]
+        content: "Can't agree more!",
+      },
+    ],
   },
   {
     handle: "Someone",
@@ -62,7 +62,7 @@ let data = [
     retweets: 110,
     shares: 90,
     uuid: uuidv4(),
-    replies: []
+    replies: [],
   },
 
   {
@@ -82,9 +82,8 @@ let data = [
         pfp: "images/pp3.png",
         content: "I agree with you, Twimba!",
       },
-    ]
+    ],
   },
-]
+];
 
-
-export default data
+export default data;
