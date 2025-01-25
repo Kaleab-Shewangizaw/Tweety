@@ -1,4 +1,5 @@
 import data from "./data.js";
+import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
 let showReplies = false
 document.addEventListener("click", (e) => {
@@ -46,7 +47,23 @@ if(e.target.dataset.replies){
 document.getElementById("form").addEventListener("submit", (e) => {
   e.preventDefault();
   const tweet = document.getElementById("tweet-text")
-  console.log(tweet.value)
+  tweet.value.trim()
+  if(tweet.value === "") return
+  data.unshift({
+    handle: "Twimba",
+        pfp: "images/pp2.jpg",
+        content: tweet.value,
+        isLiked: false,
+        isRetweeted: false,
+        likes: 0,
+        retweets: 0,
+        shares: 0,
+        uuid: uuidv4(),
+        replies: []
+  })
+  
+  tweet.value = ""
+  render()
 })
 
 function createFeed() {
