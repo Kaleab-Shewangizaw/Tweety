@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
+
 let data = [
   {
     handle: "Twimba",
@@ -8,9 +10,10 @@ let data = [
     likes: 11,
     retweets: 10,
     shares: 50,
+    uuid: uuidv4(),
     replies: [
       {
-        handle: "Elon Musk",
+        handle: "Github",
         pfp: "images/pp3.png",
         content: "I agree with you, Twimba!",
       },
@@ -23,16 +26,17 @@ let data = [
   },
   {
     handle: "Kaleab",
-    pfp: "images/pp2.jpg",
+    pfp: "images/pp6.webp",
     content: "this is the contnet of my post",
     isLiked: false,
     isRetweeted: false,
     likes: 110,
     retweets: 100,
     shares: 99,
+    uuid: uuidv4(),
     replies: [
       {
-        handle: "Elon Musk",
+        handle: "Github",
         pfp: "images/pp3.png",
         content: "I agree with you, Twimba!",
       },
@@ -50,25 +54,28 @@ let data = [
   },
   {
     handle: "Someone",
-    pfp: "images/pp2.jpg",
+    pfp: "images/pp4.jpg",
     content: "this is the contnet of my post",
     isLiked: false,
     isRetweeted: false,
     likes: 123,
     retweets: 110,
     shares: 90,
+    uuid: uuidv4(),
     replies: []
   },
 
   {
     handle: "Elon Musk",
-    pfp: "images/pp3.jpg",
+    pfp: "images/pp7.webp",
     content: "this is the contnet of my post",
     isLiked: false,
     isRetweeted: false,
+    isShared: false,
     likes: 270,
     retweets: 199,
     shares: 110,
+    uuid: uuidv4(),
     replies: [
       {
         handle: "Kaleab Shewangizaw",

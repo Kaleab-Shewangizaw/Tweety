@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 body {
   background-color: #494444;
   margin: 0;
@@ -17,7 +19,7 @@ main {
   overflow: auto;
 }
 
-main::-webkit-scrollbar{
+main::-webkit-scrollbar {
   width: 12px;
   height: 12px;
   background-color: rgba(0, 0, 0, 0.3);
@@ -28,7 +30,7 @@ main::-webkit-scrollbar{
   transform: translateY(-50%);
 }
 
-main::-webkit-scrollbar-thumb{
+main::-webkit-scrollbar-thumb {
   background-color: #333;
   border-radius: 20px;
   transition: background-color 0.3s ease;
@@ -80,14 +82,14 @@ main .tweet-area form {
 
 main .tweet-area form textarea {
   border: none;
-  border-top: 2px solid #b78012;
+  border-top: 2px solid #a27d34ce;
   width: 100%;
   height: 150px;
   font-size: 15px;
   resize: none;
   padding: 5px;
   border-radius: 10px;
-  background-color: rgba(54, 54, 54, 0.492);
+  background-color: rgba(38, 37, 37, 0.631);
   color: white;
 }
 
@@ -97,8 +99,9 @@ main .tweet-area form textarea::placeholder {
 
 main .tweet-area form textarea:focus {
   outline: none;
-  border-top: #ff9500 2px solid;
-  background-color: rgba(32, 32, 32, 0.597);
+  border-top: #ff9500 3px solid;
+  background-color: rgb(32, 32, 32);
+  transition: all 0.1s ease;
 }
 
 main .tweet-area form button {
@@ -125,12 +128,13 @@ main .tweet-area form button:hover {
 }
 
 .feed {
+  font-family: "Lato", serif;
   display: flex;
   flex-direction: column;
-  width: 78%;
+  width: 83%;
   padding: 5%;
   margin: auto;
-  background-color: rgba(32, 32, 32, 0.597);
+  background-color: rgba(32, 32, 32, 0.328);
   border-radius: 10px;
 }
 
@@ -141,7 +145,8 @@ main .tweet-area form button:hover {
   color: white;
   display: flex;
   flex-direction: column;
-  border-bottom: 2px solid #b78012;
+  border-radius: 20px;
+  border-bottom: 2px solid #8d8b899b;
 }
 
 .feed .tweet .tweet-header,
@@ -153,11 +158,18 @@ main .tweet-area form button:hover {
   font-size: larger;
   color: #f5af23;
   cursor: pointer;
+  width: fit-content;
 }
 
-.feed .tweet .tweet-header img,
-.replies .reply img {
+.feed .tweet .tweet-header img {
   width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.replies .reply img {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 }
 
@@ -178,7 +190,8 @@ main .tweet-area form button:hover {
 .feed .tweet .tweet-footer {
   display: flex;
   width: 80%;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  gap: 50px;
   padding: 10px;
 
   color: gray;
@@ -219,8 +232,20 @@ span.comment:hover {
   color: #ee00ff;
   background-color: rgba(243, 44, 226, 0.392);
 }
+
 .heart:hover {
   color: #ee00ff;
+}
+
+.feed .tweet .tweet-footer .liked .fa-heart, .liked {
+  color: #ee00ff;
+}
+
+.feed .tweet .tweet-footer .retweeted .fa-retweet, .retweeted {
+  color: #00ff00;
+}
+.feed .tweet .tweet-footer .shared .fa-share, .shared {
+  color: #001eff;
 }
 
 .feed .tweet .tweet-footer .retweet:hover .fa-retweet {
