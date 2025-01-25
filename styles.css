@@ -1,12 +1,12 @@
-body{
-    background-color: #494444;
-    margin: 0;
-    padding: 20px 0;
-    height: 100vh;
-    width: 100%;
+body {
+  background-color: #494444;
+  margin: 0;
+  padding: 20px 0;
+  height: 95.5vh;
+  width: 100%;
 }
 
-main{
+main {
   width: 50%;
   height: 95%;
   margin: auto;
@@ -15,10 +15,26 @@ main{
   display: flex;
   flex-direction: column;
   overflow: auto;
-
 }
 
-main .header{
+main::-webkit-scrollbar{
+  width: 12px;
+  height: 12px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+main::-webkit-scrollbar-thumb{
+  background-color: #333;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+main .header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,44 +45,40 @@ main .header{
   height: 50px;
 }
 
-main .header h1{
+main .header h1 {
   margin: 0;
   font-weight: 900;
   color: #f5af23;
-
 }
 
-main .header img{
+main .header img {
   width: 120px;
   margin: 0;
-  
 }
 
-main .tweet-area{
+main .tweet-area {
   display: flex;
   width: 100%;
   justify-content: space-around;
   align-items: center;
-  
 }
 
-main .tweet-area img{
+main .tweet-area img {
   align-self: flex-start;
   width: 200px;
   margin-left: auto;
   filter: drop-shadow(5px -10px 30px rgba(241, 149, 12, 0.977));
 }
 
-main .tweet-area form{
+main .tweet-area form {
   width: 60%;
 
   padding: 5%;
   display: flex;
   flex-direction: column;
-
 }
 
-main .tweet-area form textarea{
+main .tweet-area form textarea {
   border: none;
   border-top: 2px solid #b78012;
   width: 100%;
@@ -79,17 +91,17 @@ main .tweet-area form textarea{
   color: white;
 }
 
-main .tweet-area form textarea::placeholder{
+main .tweet-area form textarea::placeholder {
   color: rgb(179, 176, 176);
 }
 
-main .tweet-area form textarea:focus{
+main .tweet-area form textarea:focus {
   outline: none;
   border-top: #ff9500 2px solid;
   background-color: rgba(32, 32, 32, 0.597);
 }
 
-main .tweet-area form button{
+main .tweet-area form button {
   background-color: #f5af23;
   border: none;
   width: fit-content;
@@ -106,13 +118,13 @@ main .tweet-area form button{
   transition: all 0.3s;
 }
 
-main .tweet-area form button:hover{
-  background-color: rgba(32, 32, 32, 0.597);;
+main .tweet-area form button:hover {
+  background-color: rgba(32, 32, 32, 0.597);
   color: #ff9500;
   border: 2px solid #ff9500;
 }
 
-.feed{
+.feed {
   display: flex;
   flex-direction: column;
   width: 78%;
@@ -122,7 +134,7 @@ main .tweet-area form button:hover{
   border-radius: 10px;
 }
 
-.feed .tweet{
+.feed .tweet {
   width: 90%;
   margin: auto;
   margin-bottom: 10px;
@@ -132,7 +144,8 @@ main .tweet-area form button:hover{
   border-bottom: 2px solid #b78012;
 }
 
-.feed .tweet .tweet-header, .replies .reply .reply-header{
+.feed .tweet .tweet-header,
+.replies .reply .reply-header {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -142,45 +155,45 @@ main .tweet-area form button:hover{
   cursor: pointer;
 }
 
-.feed .tweet .tweet-header img, .replies .reply img{
+.feed .tweet .tweet-header img,
+.replies .reply img {
   width: 50px;
   border-radius: 50%;
 }
 
-.feed .tweet .tweet-content{
+.feed .tweet .tweet-content {
   width: 80%;
   margin: auto;
   font-size: 18px;
   padding-top: 0;
-  
 }
 
-.feed .tweet .tweet-content p, .replies .reply .reply-content p{
+.feed .tweet .tweet-content p,
+.replies .reply .reply-content p {
   padding: 0;
   margin: 0;
   margin-bottom: 10px;
 }
 
-.feed .tweet .tweet-footer{
+.feed .tweet .tweet-footer {
   display: flex;
   width: 80%;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   padding: 10px;
-  
+
   color: gray;
   align-self: center;
 }
 
-.feed .tweet .tweet-footer span{
+.feed .tweet .tweet-footer span {
   display: flex;
   align-items: center;
   cursor: pointer;
 
   transition: all 0.3s;
-  
 }
 
-.feed .tweet .tweet-footer i{
+.feed .tweet .tweet-footer i {
   display: flex;
   font-size: larger;
   justify-content: center;
@@ -193,47 +206,46 @@ main .tweet-area form button:hover{
   transition: all 0.3s;
 }
 
-.feed .tweet .tweet-footer .comment:hover .fa-comment{
+.feed .tweet .tweet-footer .comment:hover .fa-comment {
   color: #00e1ff;
   background-color: rgba(35, 245, 203, 0.403);
 }
 
-span.comment:hover{
+span.comment:hover {
   color: #00e1ff;
 }
 
-.feed .tweet .tweet-footer .heart:hover .fa-heart{
+.feed .tweet .tweet-footer .heart:hover .fa-heart {
   color: #ee00ff;
   background-color: rgba(243, 44, 226, 0.392);
 }
-.heart:hover{
+.heart:hover {
   color: #ee00ff;
-
 }
 
-.feed .tweet .tweet-footer .retweet:hover .fa-retweet{
+.feed .tweet .tweet-footer .retweet:hover .fa-retweet {
   color: #00ff00;
   background-color: rgba(44, 243, 44, 0.408);
 }
 
-.retweet:hover{
+.retweet:hover {
   color: #00ff00;
 }
 
-.feed .tweet .tweet-footer .share:hover .fa-share{
+.feed .tweet .tweet-footer .share:hover .fa-share {
   color: #001eff;
   background-color: rgba(44, 61, 243, 0.408);
 }
 
-.share:hover{
+.share:hover {
   color: #001eff;
 }
 
-.feed .tweet .tweet-footer i{
+.feed .tweet .tweet-footer i {
   z-index: 1;
 }
 
-.replies{
+.replies {
   display: flex;
   flex-direction: column;
   width: 80%;
@@ -242,26 +254,18 @@ span.comment:hover{
   padding: 10px;
 }
 
-.replies .reply .reply-header{
+.replies .reply .reply-header {
   font-size: medium;
 }
 
-.replies .reply .reply-content{
-  width:80%;
+.replies .reply .reply-content {
+  width: 80%;
   margin: auto;
   border-radius: 10px;
   color: white;
 }
 
-
-
-
-
-
-
-
-
-footer{
+footer {
   text-align: center;
   background-color: #494444;
   color: white;
