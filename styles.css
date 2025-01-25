@@ -434,6 +434,15 @@ footer a i{
   margin: 0 20px;
 }
 
+@media screen and (max-width: 1400px){
+  main{
+    width: 80%
+}
+  feed{
+    width: 80%
+}
+}
+
 @media screen and (max-width: 768px) {
   footer {
     margin-top: 10px;
