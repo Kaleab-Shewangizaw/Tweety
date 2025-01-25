@@ -52,4 +52,4 @@ A lightweight, interactive task manager with a social media vibe! Add tasks, man
    git clone https://github.com/Kaleab-Shewangizaw/Tweety.git
 GitHub: Kaleab-Shewangizaw
 Telegram: https://t.me/kal_abX
-LinkedIn: linkedin.com/in/kaleab-shewangizaw-976a35281/
+LinkedIn: https://linkedin.com/in/kaleab-shewangizaw-976a35281/
