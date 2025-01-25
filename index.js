@@ -36,7 +36,50 @@ document.addEventListener("click", (e) => {
       .getElementById(e.target.dataset.replies)
       .classList.toggle("hidden");
   }
+
+  if (e.target.dataset.reply) {
+    const tweet = data.find((tweet) => tweet.uuid === e.target.dataset.reply);
+    document.getElementsByTagName("main")[0].innerHTML += `
+    <section class="add-reply" id="add-reply">
+        <div class="rply-container">
+          <button id="close-btn" class="close">X</button>
+          <h3>Reply to <span>${tweet.handle}</span>'s post</h3>
+        <form action="" id="reply-form" data-reply="${tweet.uuid}">
+          <textarea
+            name="reply-text"
+            id="reply-text"
+            placeholder="reply here"
+          ></textarea>
+          <button type="submit">reply</button>
+        </form>
+        </div>
+      </section>
+    `;
+
+    // Add functionality to the close button immediately after adding it
+    document.getElementById("close-btn").addEventListener("click", () => {
+      document.getElementById("add-reply").remove();
+    });
+
+    document.getElementById("reply-form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const reply = document.getElementById("reply-text");
+      reply.value.trim();
+      if (reply.value === "") return;
+      tweet.replies.unshift({
+        handle: "Twimba",
+        pfp: "images/pp2.jpg",
+        content: reply.value,
+      });
+      reply.value = "";
+      render();
+      document.getElementById("add-reply").remove();
+    });
+  }
 });
+
+
+
 
 document.getElementById("form").addEventListener("submit", (e) => {
   e.preventDefault();
@@ -95,7 +138,7 @@ function createFeed() {
           <div class="tweet-footer">
             <span class="comment" id="comment" data-replies="${
               data.uuid
-            }"> <i class="fa-regular fa-comment"></i> ${
+            }"> <i class="fa-regular fa-comment" data-reply = "${data.uuid}"></i> ${
       data.replies.length
     }</span>
 

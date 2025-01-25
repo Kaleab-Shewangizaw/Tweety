@@ -104,7 +104,7 @@ main .tweet-area form textarea:focus {
   transition: all 0.1s ease;
 }
 
-main .tweet-area form button {
+main .tweet-area form button, .add-reply .rply-container form button {
   background-color: #f5af23;
   border: none;
   width: fit-content;
@@ -121,7 +121,7 @@ main .tweet-area form button {
   transition: all 0.3s;
 }
 
-main .tweet-area form button:hover {
+main .tweet-area form button:hover, .add-reply .rply-container form button:hover {
   background-color: rgba(32, 32, 32, 0.597);
   color: #ff9500;
   border: 2px solid #ff9500;
@@ -293,6 +293,94 @@ span.comment:hover {
   border-radius: 10px;
   color: white;
 }
+
+.add-reply {
+  position: absolute;
+  height: 88.57%;
+  width: 50%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.947);
+  z-index: 5;
+  color: white;
+  
+}
+
+.add-reply .rply-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.add-reply .rply-container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.add-reply .rply-container form textarea {
+  border: none;
+  border-top: 2px solid #a27d34ce;
+  width: 80%;
+  height: 150px;
+  font-size: 15px;
+  resize: none;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgba(72, 71, 71, 0.444);
+  color: white;
+}
+
+.add-reply .rply-container form textarea::placeholder {
+  color: rgb(179, 176, 176);
+}
+
+.add-reply .rply-container form textarea:focus {
+  outline: none;
+  border-top: #ff9500 3px solid;
+  background-color: rgba(64, 64, 64, 0.9);
+  transition: all 0.1s ease;
+}
+
+.add-reply .rply-container h3{
+  font-size: 2rem;
+  font-family: "Lato", serif;
+  align-self: flex-start;
+  margin-left: 10%;
+}
+
+.add-reply .rply-container h3 span{
+  color: #f5af23;
+  cursor: pointer;
+}
+
+.add-reply .rply-container .close{
+  align-self: flex-end;
+  margin-right: 10%;
+  font-size: 1.5rem;
+  background-color: rgba(163, 162, 162, 0.43);
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.add-reply .rply-container .close:hover{
+  background-color: rgba(163, 162, 162, 0.7);
+  color: #f55423;
+  transition: all 0.1s ease;
+
+}
+ 
+
 
 footer {
   text-align: center;
