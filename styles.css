@@ -441,6 +441,9 @@ footer a i{
   feed{
     width: 80%
 }
+   .add-reply {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 768px) {
