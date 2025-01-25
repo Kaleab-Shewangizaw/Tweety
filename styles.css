@@ -138,6 +138,10 @@ main .tweet-area form button:hover {
   border-radius: 10px;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .feed .tweet {
   width: 90%;
   margin: auto;

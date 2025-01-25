@@ -1,7 +1,7 @@
 import data from "./data.js";
 
+let showReplies = false
 document.addEventListener("click", (e) => {
-
     if (e.target.dataset.likes) {
         let tweet = data.find((tweet) => tweet.uuid === e.target.dataset.likes);
         if (tweet.isLiked) {
@@ -35,6 +35,18 @@ document.addEventListener("click", (e) => {
     }
     render();
 }
+if(e.target.dataset.replies){
+  document.getElementById(e.target.dataset.replies).classList.toggle("hidden")
+  
+}
+  
+
+})
+
+document.getElementById("form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const tweet = document.getElementById("tweet-text")
+  console.log(tweet.value)
 })
 
 function createFeed() {
@@ -42,8 +54,9 @@ function createFeed() {
 
   data.forEach((data) => {
     let rply = "";
+    if (data.replies.length > 0) {
     data.replies.forEach((reply) => {
-      rply += `<div class="replies">
+      rply += `
         <div class="reply">
           <div class="reply-header">
             <img src=${reply.pfp} alt="tweet-account" />
@@ -55,8 +68,8 @@ function createFeed() {
             </p>
           </div>
         </div>
-      </div>`;
-    });
+      `;
+    });}
     feed += `
         <div class="tweet">
           <div class="tweet-header">
@@ -69,7 +82,7 @@ function createFeed() {
             </p>
           </div>
           <div class="tweet-footer">
-            <span class="comment" > <i class="fa-regular fa-comment" data-replies="${data.uuid}"></i> ${data.replies.length}</span>
+            <span class="comment" id="comment" data-replies="${data.uuid}"> <i class="fa-regular fa-comment"></i> ${data.replies.length}</span>
 
             <span class="heart ${data.isLiked ? "liked" : ""}" > <i class="${data.isLiked ? "fa-solid": 'fa-regular'} fa-heart" data-likes="${data.uuid}"></i>${data.likes}</span>
 
@@ -77,7 +90,9 @@ function createFeed() {
 
             <span class="share ${data.isShared ? "shared" : ""}" > <i class="fa-solid fa-share" data-shares="${data.uuid}"></i> ${data.shares}</span>
           </div>
+          <div class="replies hidden" id = "${data.uuid}">
           ${rply}
+          </div>
         </div>
         
     `;
