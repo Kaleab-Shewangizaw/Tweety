@@ -3,6 +3,20 @@ import { v4 as uuidv4 } from "https://jspm.dev/uuid";
 
 // Use the imported mainData directly
 let data = mainData;
+loadData(); // Load data from localStorage on page load
+render(); // Render the page with the loaded data
+
+function saveData() {
+  localStorage.setItem("tweets", JSON.stringify(data));
+}
+
+function loadData() {
+  const savedData = localStorage.getItem("tweets");
+  if (savedData) {
+    data = JSON.parse(savedData);
+  }
+}
+
 
 document.addEventListener("click", (e) => {
   if (e.target.dataset.likes) {
@@ -14,6 +28,7 @@ document.addEventListener("click", (e) => {
       tweet.likes++;
       tweet.isLiked = true;
     }
+    saveData();
     render();
   }
   else if (e.target.dataset.retweets) {
@@ -25,10 +40,12 @@ document.addEventListener("click", (e) => {
       tweet.retweets++;
       tweet.isRetweeted = true;
     }
+    saveData();
     render();
   }
   else if (e.target.dataset.delete) {
     data = data.filter((tweet) => tweet.uuid !== e.target.dataset.delete);
+    saveData();
     render();
   }
   else if (e.target.dataset.replies) {
@@ -73,6 +90,7 @@ document.addEventListener("click", (e) => {
         content: reply.value,
       });
       reply.value = "";
+      saveData();
       render();
       document.getElementById("add-reply").remove();
     });
@@ -100,6 +118,7 @@ document.getElementById("form").addEventListener("submit", (e) => {
   });
 
   tweet.value = "";
+  saveData();
   render();
 });
 
