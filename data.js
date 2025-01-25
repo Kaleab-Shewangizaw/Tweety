@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from "https://jspm.dev/uuid";
 
 let data = [
   {
-    handle: "Twimba",
+    handle: "Tweety",
     pfp: "images/pp2.jpg",
     content: "this is the contnet of my post",
     isLiked: false,
@@ -14,17 +14,17 @@ let data = [
       {
         handle: "Github",
         pfp: "images/pp3.png",
-        content: "I agree with you, Twimba!",
+        content: "I agree with you, Tweety!",
       },
       {
-        handle: "Kaleab",
+        handle: "Someone 2",
         pfp: "images/pp1.jpg",
         content: "Can't agree more!",
       },
     ],
   },
   {
-    handle: "Kaleab",
+    handle: "Someone 2",
     pfp: "images/pp6.webp",
     content: "this is the contnet of my post",
     isLiked: false,
@@ -36,16 +36,16 @@ let data = [
       {
         handle: "Github",
         pfp: "images/pp3.png",
-        content: "I agree with you, Twimba!",
+        content: "I agree with you, Tweety!",
       },
       {
-        handle: "Kaleab",
+        handle: "Someone 2",
         pfp: "images/pp1.jpg",
         content: "Can't agree more!",
       },
       {
-        handle: "Kaleab",
-        pfp: "images/pp1.jpg",
+        handle: "Someone",
+        pfp: "images/pp4.jpg",
         content: "Can't agree more!",
       },
     ],
@@ -74,9 +74,9 @@ let data = [
     uuid: uuidv4(),
     replies: [
       {
-        handle: "Kaleab Shewangizaw",
+        handle: "Someone 2",
         pfp: "images/pp3.png",
-        content: "I agree with you, Twimba!",
+        content: "I agree with you, Tweety!",
       },
     ],
   },

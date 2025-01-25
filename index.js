@@ -16,7 +16,7 @@ document.addEventListener("click", (e) => {
     }
     render();
   }
-  if (e.target.dataset.retweets) {
+  else if (e.target.dataset.retweets) {
     let tweet = data.find((tweet) => tweet.uuid === e.target.dataset.retweets);
     if (tweet.isRetweeted) {
       tweet.retweets--;
@@ -27,17 +27,17 @@ document.addEventListener("click", (e) => {
     }
     render();
   }
-  if (e.target.dataset.delete) {
+  else if (e.target.dataset.delete) {
     data = data.filter((tweet) => tweet.uuid !== e.target.dataset.delete);
     render();
   }
-  if (e.target.dataset.replies) {
+  else if (e.target.dataset.replies) {
     document
       .getElementById(e.target.dataset.replies)
       .classList.toggle("hidden");
   }
 
-  if (e.target.dataset.reply) {
+  else if (e.target.dataset.reply) {
     const tweet = data.find((tweet) => tweet.uuid === e.target.dataset.reply);
     document.getElementsByTagName("main")[0].innerHTML += `
     <section class="add-reply" id="add-reply">
@@ -45,6 +45,7 @@ document.addEventListener("click", (e) => {
           <button id="close-btn" class="close">X</button>
           <h3>Reply to <span>${tweet.handle}</span>'s post</h3>
         <form action="" id="reply-form" data-reply="${tweet.uuid}">
+        <input type="text" name="reply-handle" id="reply-handle" class = "replyr-name" placeholder = "change your name here if you want to!" maxlength="20"/>
           <textarea
             name="reply-text"
             id="reply-text"
@@ -67,7 +68,7 @@ document.addEventListener("click", (e) => {
       reply.value.trim();
       if (reply.value === "") return;
       tweet.replies.unshift({
-        handle: "Twimba",
+        handle: document.getElementById("reply-handle").value || "Tweety",
         pfp: "images/pp2.jpg",
         content: reply.value,
       });
@@ -87,7 +88,7 @@ document.getElementById("form").addEventListener("submit", (e) => {
   tweet.value.trim();
   if (tweet.value === "") return;
   data.unshift({
-    handle: "Twimba",
+    handle: "Tweety",
     pfp: "images/pp2.jpg",
     content: tweet.value,
     isLiked: false,

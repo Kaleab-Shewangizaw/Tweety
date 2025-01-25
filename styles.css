@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+VN:wght@100..400&display=swap');
 
 body {
   background-color: #494444;
@@ -40,17 +41,18 @@ main .header {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 20px;
   flex-direction: row-reverse;
   margin: 0;
   height: 50px;
+  font-family: "Playwrite VN", serif;
 }
 
 main .header h1 {
   margin: 0;
   font-weight: 900;
-  color: #f5af23;
+  color: #e9bc62;
 }
 
 main .header img {
@@ -349,6 +351,30 @@ span.comment:hover {
   background-color: rgba(64, 64, 64, 0.9);
   transition: all 0.1s ease;
 }
+.add-reply .rply-container form input{
+  border: none;
+  border-top: 2px solid #a27d34ce;
+  width: 40%;
+  margin-bottom: 20px;
+  height: 40px;
+  font-size: 17px ;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgba(72, 71, 71, 0.444);
+  color: white;
+}
+
+.add-reply .rply-container form input::placeholder {
+  color: rgb(179, 176, 176);
+}
+
+.add-reply .rply-container form input:focus {
+  outline: none;
+  border-top: #ff9500 3px solid;
+  background-color: rgba(64, 64, 64, 0.9);
+  transition: all 0.1s ease;
+}
+
 
 .add-reply .rply-container h3{
   font-size: 2rem;
@@ -379,6 +405,8 @@ span.comment:hover {
   transition: all 0.1s ease;
 
 }
+
+
  
 
 
@@ -389,3 +417,94 @@ footer {
   margin-bottom: 0;
   margin-top: 20px;
 }
+
+footer a{
+  color: #d5ac5b;
+  text-decoration: none;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+footer a:hover{
+  color: #ff9500;
+}
+
+footer a i{
+  font-size: 1.5rem;
+  margin: 0 20px;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    margin-top: 10px;
+  }
+
+ .feed {
+    width: 80%;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  main .tweet-area img {
+    display: none;
+  }
+
+  main .tweet-area form {
+    width: 100%;
+  }
+
+  main .tweet-area form button {
+    width: 100%;
+  }
+
+  .feed .tweet .tweet-footer {
+    width: 100%;
+  }
+
+  .feed .tweet .tweet-footer i {
+    width: 30px;
+    height: 30px;
+  }
+
+  .feed .tweet .tweet-footer span {
+    font-size: small;
+  }
+
+  .feed .tweet .tweet-content {
+    font-size: 15px;
+  }
+
+  .feed .tweet .tweet-header img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .replies .reply img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .add-reply {
+    width: 100%;
+  }
+
+  .add-reply .rply-container form textarea {
+    width: 90%;
+  }
+
+  .add-reply .rply-container form input{
+    width: 60%;
+  }
+
+  .add-reply .rply-container h3{
+    font-size: 1.5rem;
+  }
+
+  .add-reply .rply-container .close{
+    font-size: 1.2rem;
+  }
+}
+
+
