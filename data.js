@@ -9,7 +9,6 @@ let data = [
     isRetweeted: false,
     likes: 11,
     retweets: 10,
-    shares: 50,
     uuid: uuidv4(),
     replies: [
       {
@@ -32,7 +31,6 @@ let data = [
     isRetweeted: false,
     likes: 110,
     retweets: 100,
-    shares: 99,
     uuid: uuidv4(),
     replies: [
       {
@@ -60,7 +58,6 @@ let data = [
     isRetweeted: false,
     likes: 123,
     retweets: 110,
-    shares: 90,
     uuid: uuidv4(),
     replies: [],
   },
@@ -74,7 +71,6 @@ let data = [
     isShared: false,
     likes: 270,
     retweets: 199,
-    shares: 110,
     uuid: uuidv4(),
     replies: [
       {

@@ -261,13 +261,13 @@ span.comment:hover {
   color: #00ff00;
 }
 
-.feed .tweet .tweet-footer .share:hover .fa-share {
-  color: #001eff;
-  background-color: rgba(44, 61, 243, 0.408);
+.feed .tweet .tweet-footer .share:hover .fa-trash {
+  color: #ff0000;
+  background-color: rgba(243, 44, 44, 0.408);
 }
 
 .share:hover {
-  color: #001eff;
+  color: #ff0000;
 }
 
 .feed .tweet .tweet-footer i {
