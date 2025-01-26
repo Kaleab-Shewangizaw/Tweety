@@ -434,22 +434,14 @@ footer a i{
   margin: 0 20px;
 }
 
-@media screen and (max-width: 490px){
-   .feed{
-    width: 100%;
-    font-size: smaller;
-}
-  .feed .tweet .tweet-footer{
-    justify-content: space-around;
-    gap: 20px;
-}
+
 
 @media screen and (max-width: 1400px){
   main{
     width: 80%
 }
   .feed{
-    width: 80%
+    width: 100%
 }
    .add-reply {
     width: 80%;
@@ -527,6 +519,15 @@ footer a i{
   .add-reply .rply-container .close{
     font-size: 1.2rem;
   }
+}
+@media screen and (max-width: 490px){
+   .feed{
+    width: 100%;
+    font-size: smaller;
+}
+  .feed .tweet .tweet-footer{
+    justify-content: space-around;
+    gap: 20px;
 }
 
 
