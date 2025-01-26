@@ -436,7 +436,8 @@ footer a i{
 
 @media screen and (max-width: 490px){
    feed{
-    width: 100%
+    width: 100%;
+    font-size: smaller;
 }
 }
 
