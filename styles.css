@@ -440,9 +440,15 @@ footer a i{
   main{
     width: 80%
 }
+  
   .feed{
-    width: 100%
+    width: 80%;
+    padding: 0;
 }
+  .feed .tweet{
+    width: 80%;
+    padding: 0;
+  }
    .add-reply {
     width: 80%;
   }
@@ -523,11 +529,12 @@ footer a i{
 @media screen and (max-width: 490px){
    .feed{
     width: 100%;
+     padding: 0;
     font-size: smaller;
 }
   .feed .tweet .tweet-footer{
     justify-content: space-around;
-    gap: 20px;
+    gap: 10px;
 }
 
 
